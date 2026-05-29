@@ -1,216 +1,80 @@
 /* Add in your custom CSS here and it will overwrite all default style in Continuum */
-
-/* ============================================================
-   Deep Roots color scheme overrides
-   Palette:
-     Dark brown:   #3d2f23
-     Medium brown: #95755a
-     Light gold:   #b7a376
-     Tan/beige bg: #cec5b2
-     Body text:    #222
-   ============================================================ */
-
-/* Page background */
-body,
-#page {
-  background: #cec5b2;
-  color: #222;
-}
-
-/* Links */
-a { color: #95755a; }
-a:hover { color: #3d2f23; }
-
-/* Top page-menu bar */
-#page-menu-wrapper {
-  background: #3d2f23;
-  background-color: #3d2f23;
-}
-#page-menu-wrapper a,
-#page-menu .menu a {
-  color: #cec5b2;
-}
-#page-menu-wrapper a:hover,
-#page-menu .menu a:hover {
-  color: #fff;
-}
-#page-menu .menu li.current-menu-item > a,
-#page-menu .menu li.current_page_item > a {
-  background: #95755a;
-  color: #fff;
-}
-
-/* Main nav menu */
-#main-menu {
-  background: #4a3a2d;
-  float: left;
-  width: 959px;
-  margin: 0 auto;
-}
-#main-menu a { color: #f0ebe4; }
-#main-menu a:hover { color: #fff; }
-#main-menu li.current-menu-item > a,
-#main-menu li.current_page_item > a {
-  background: #95755a;
-  color: #fff;
-}
-#main-menu .sub-menu {
-  background: #3d2f23;
-  border-top: 3px solid #95755a;
-}
-#main-menu .sub-menu a { color: #f0ebe4; }
-#main-menu .sub-menu a:hover { background: #95755a; color: #fff; }
-
-/* Small menu */
-#small-menu-wrapper { background: #5a4535; }
-#small-menu a { color: #cec5b2; }
-#small-menu a:hover { color: #fff; }
-
-/* Feed / content area */
-#feed-wrapper,
-#feed-leftend,
-#feed-rightend {
-  background: #3d2f23;
-  color: #fff;
-}
-#feed .header { background: #3d2f23; color: #fff; }
-#feed .sort a { color: #cec5b2; }
-#feed .sort a.current,
-#feed .sort a:hover { color: #fff; }
-
-/* Feed panels */
-.feed-panel .inner,
-#feed-panel-wrapper .left-panel .inner {
-  background: #f5f0e8;
-  border-color: #b7a376;
-}
-.feed-panel .category {
-  background: #b7a376;
-  border-color: #95755a;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: .9em;
-  width: 254px;
-  margin-left: 17px;
-  text-align: center;
-  padding: 0;
-}
-.feed-panel .article-image {
-  border: 0;
-  background: #e8e0d0;
-  padding: 8px;
-  margin: 8px 0;
-}
-
-/* Right panel */
-#feed-panel-wrapper .right-panel {
-  border-left: 1px solid #b7a376;
-  border-bottom: 1px solid #b7a376;
-}
-
-/* Sidebar */
-.sidebar {
-  background: #f5f0e8;
-  border-right: 1px solid #b7a376;
-  color: #444;
-}
-.sidebar h3,
-.widget-title {
-  color: #3d2f23;
-  border-bottom: 3px solid #95755a;
-}
-.sidebar a { color: #95755a; }
-.sidebar a:hover { color: #3d2f23; }
-
-/* Post/article titles */
-h1.title, h2.title, h3.title,
-.post-title a,
-.entry-title a {
-  color: #3d2f23;
-  text-decoration: none;
-}
-.post-title a:hover,
-.entry-title a:hover { color: #95755a; }
-
-/* Category labels */
-.category-label,
-.cat-label,
-span.category {
-  background: #95755a;
-  color: #fff;
-}
-.category-label:hover { background: #3d2f23; }
-
-/* Pagination */
-.pagination a,
-.page-numbers a {
-  border: 1px solid #b7a376;
-  color: #3d2f23;
-  background: #f5f0e8;
-}
-.pagination a:hover,
-.page-numbers a:hover,
-.page-numbers.current {
-  background: #3d2f23;
-  color: #fff;
-  border-color: #3d2f23;
-}
-
-/* Footer */
-#footer,
-#footer-wrapper {
-  background: #3d2f23;
-  border-top: 1px solid #2a1f16;
-  color: #aaa;
-}
-#footer a { color: #b7a376; }
-#footer a:hover { color: #fff; }
-
-/* Buttons */
-.button, button, input[type="submit"] {
-  background: #95755a;
-  color: #fff;
-  border-color: #95755a;
-}
-.button:hover, button:hover, input[type="submit"]:hover {
-  background: #3d2f23;
-  border-color: #3d2f23;
-  color: #fff;
-}
-
-/* Search input */
-#searchform input[type="text"],
-#s {
-  background: #f5f0e8;
-  border: 1px solid #b7a376;
-  color: #3d2f23;
-}
-
-/* Breaking news bar */
-#breaking-wrapper {
-  background: #b7a376;
-  color: #3d2f23;
-}
-#breaking-wrapper a { color: #3d2f23; }
-#breaking-wrapper a:hover { color: #fff; }
-
-/* Tab widgets */
-.ui-tabs .ui-tabs-nav li.ui-tabs-selected a,
-.ui-tabs .ui-tabs-nav li.ui-state-active a {
-  background: #95755a;
-  color: #fff;
-}
-.ui-tabs .ui-tabs-nav li a {
-  background: #e8e0d0;
-  color: #3d2f23;
-}
-.ui-tabs .ui-tabs-nav li a:hover {
-  background: #b7a376;
-  color: #fff;
-}
-
-/* Logo bar */
-#logo-bar { background: #cec5b2; }
-#logo-bar h1 a { color: #3d2f23; }
-#logo-bar h1 a:hover { color: #95755a; }
-.subtitle { color: #7d6048; }
+#main-menu .container {
+        width:957px;
+        float:left;
+    }
+@media screen {
+  .feed-panel .article-image {
+    border: 0px;
+    background: #eee;
+    padding: 8px;
+    margin: 8px 0px 8px 0px;
+  }
+@media screen {
+  .feed-panel .category {
+    text-transform: uppercase;
+    padding: 0px 0px 0px 0px;
+    font-size: .9em;
+    background: #e2e2e2;
+    border-top: 1px solid #b5b5b5;
+    border-left: 1px solid #b5b5b5;
+    border-right: 1px solid #b5b5b5;
+    border-bottom:1px solid #b5b5b5;
+    width: 254px;
+    margin-left: 17px;
+    text-align: center;
+  }
+@media screen {
+  #main-menu {
+    float: left;
+    width: 959px;
+    margin: 0px auto;
+    background: #eee;
+  }
+  @media screen {
+  #page-menu-wrapper {
+    width: 100%;
+    background: url("https://deeprootsmag.org/wp-content/themes/deep-roots-magazine/css/components.css../images/pagemenu-bg.png") repeat-x 0px 0px;
+    background-color: rgba(0, 0, 0, 0);
+    background-color: #40444A;
+  }
+  @media screen {
+  .feed-panel {
+    float: left;
+    margin-right: 30px;
+    margin-top: 10px;
+    height: 420px;
+    width: 300px;
+  }
+  @media screen {
+  .feed-panel .inner {
+    padding: 3px 10px;
+    width: 278px;
+    background: #eee;
+    border-left: 1px solid #b5b5b5;
+    border-right: 1px solid #b5b5b5;
+    border-bottom: 1px solid #c9c9c9;
+    border-top: 1px solid #b5b5b5;
+  }
+  @media screen {
+  .sidebar {
+    width: 299px;
+    float: left;
+    border-right: 1px solid #b5b5b5;
+    background: #fafafa;
+    font-size: .8em;
+    color: #666;
+    border-top: #b5b5b5;
+  }
+  @media screen {
+  #feed-panel-wrapper .right-panel {
+    width: 300px;
+    border-left: 1px solid #b5b5b5;
+    border-bottom: 1px solid #b5b5b5;
+  }
+  @media screen {
+      #page-menu-wrapper {
+          width:100%;
+      }
+      }
+  }
