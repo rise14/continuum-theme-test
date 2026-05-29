@@ -13,7 +13,7 @@ jobs:
           fetch-depth: 2  # needed for diff-based uploads
 
       - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.5.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ftp.yourdomain.com
           username: ${{ secrets.FTP_USERNAME }}
