@@ -113,13 +113,18 @@ add_shortcode('five_sixth_last', 'con_five_sixth_last');
 
 //buttons
 function con_button( $atts, $content = null ) {
-    extract(shortcode_atts(array(
-    'link'	=> '#',
-    'target'	=> '',
-    'variation'	=> '',
-    'size'	=> '',
-    'align'	=> '',
-    ), $atts));
+    $atts = shortcode_atts(array(
+        'link'      => '#',
+        'target'    => '',
+        'variation' => '',
+        'size'      => '',
+        'align'     => '',
+    ), $atts);
+    $link      = $atts['link'];
+    $target    = $atts['target'];
+    $variation = $atts['variation'];
+    $size      = $atts['size'];
+    $align     = $atts['align'];
 
 	$style = ($variation) ? ' '.$variation : '';
 	$align = ($align) ? ' align'.$align : '';
@@ -232,18 +237,16 @@ add_shortcode('box_dark', 'con_box_dark');
 
 //jquery toggle
 function con_toggle_simple($atts, $content = null) {
-	extract(shortcode_atts(array(
-    'title'	=> '',
-	'width' => ''
-    ), $atts));
+	$atts  = shortcode_atts(array( 'title' => '', 'width' => '' ), $atts);
+	$title = $atts['title'];
+	$width = $atts['width'];
 	return '<h4 class="toggle">'.$title.'</h4><div class="toggle-content" style="width:'.$width.'px;">'.do_shortcode($content).'</div>';
 }
 add_shortcode('toggle_simple', 'con_toggle_simple');
 function con_toggle_box($atts, $content = null) {
-	extract(shortcode_atts(array(
-    'title'	=> '',
-	'width' => ''
-    ), $atts));
+	$atts  = shortcode_atts(array( 'title' => '', 'width' => '' ), $atts);
+	$title = $atts['title'];
+	$width = $atts['width'];
 	return '<div class="toggle-box-wrapper"><div class="toggle-box"><h4 class="toggle">'.$title.'</h4><div class="toggle-content" style="width:'.$width.'px;">'.do_shortcode($content).'</div></div></div>';
 }
 add_shortcode('toggle_box', 'con_toggle_box');
@@ -269,9 +272,8 @@ function con_tab_group( $atts, $content ){
 
 add_shortcode( 'tab', 'con_tab' );
 function con_tab( $atts, $content ){
-extract(shortcode_atts(array(
-'title' => 'Tab %d'
-), $atts));
+	$atts  = shortcode_atts(array( 'title' => 'Tab %d' ), $atts);
+	$title = $atts['title'];
 
 $x = $GLOBALS['tab_count'];
 $GLOBALS['tabs'][$x] = array( 'title' => sprintf( $title, $GLOBALS['tab_count'] ), 'content' =>  $content );

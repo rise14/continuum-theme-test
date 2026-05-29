@@ -209,7 +209,16 @@ class con_latest_tweets extends WP_Widget {
 		//set theme options
 		$con_twitter_name = $con_misc['twitter_name'];		
 		
-		extract( $args );
+		[  "before_widget" => $before_widget,
+		"after_widget"  => $after_widget,
+		"before_title"  => $before_title,
+		"after_title"   => $after_title,
+	] = array_merge([
+		"before_widget" => "",
+		"after_widget"  => "",
+		"before_title"  => "",
+		"after_title"   => "",
+	], (array) $args);
 
 		/* User-selected settings. */
 		$title = apply_filters('widget_title', $instance['title'] );
@@ -359,7 +368,16 @@ class con_flickr extends WP_Widget {
 		$con_flickr_name = $con_misc['flickr_name'];
 		$con_colorbox = $con_misc['colorbox'];		
 		
-		extract( $args );
+		[  "before_widget" => $before_widget,
+		"after_widget"  => $after_widget,
+		"before_title"  => $before_title,
+		"after_title"   => $after_title,
+	] = array_merge([
+		"before_widget" => "",
+		"after_widget"  => "",
+		"before_title"  => "",
+		"after_title"   => "",
+	], (array) $args);
 
 		/* User-selected settings. */
 		$title = apply_filters('widget_title', $instance['title'] );
@@ -454,7 +472,16 @@ class con_recent_reactions extends WP_Widget {
 		parent::__construct( 'con_recent_reactions', 'Continuum Recent Reactions', $widget_ops, $control_ops );
 	}	
 	function widget( $args, $instance ) {		
-		extract( $args );
+		[  "before_widget" => $before_widget,
+		"after_widget"  => $after_widget,
+		"before_title"  => $before_title,
+		"after_title"   => $after_title,
+	] = array_merge([
+		"before_widget" => "",
+		"after_widget"  => "",
+		"before_title"  => "",
+		"after_title"   => "",
+	], (array) $args);
 
 		/* User-selected settings. */
 		$title = apply_filters('widget_title', $instance['title'] );
@@ -509,7 +536,16 @@ class con_tabbed_posts extends WP_Widget {
 		parent::__construct( 'con_tabbed_posts', 'Continuum Post Tabs', $widget_ops, $control_ops );
 	}	
 	function widget( $args, $instance ) {		
-		extract( $args );
+		[  "before_widget" => $before_widget,
+		"after_widget"  => $after_widget,
+		"before_title"  => $before_title,
+		"after_title"   => $after_title,
+	] = array_merge([
+		"before_widget" => "",
+		"after_widget"  => "",
+		"before_title"  => "",
+		"after_title"   => "",
+	], (array) $args);
 
 		/* User-selected settings. */
 		$showpopular = $instance['showpopular'];
@@ -690,7 +726,16 @@ class con_tabbed_archives extends WP_Widget {
 		parent::__construct( 'con_tabbed_archives', 'Continuum Page & Archive Tabs', $widget_ops, $control_ops );
 	}	
 	function widget( $args, $instance ) {
-		extract( $args );
+		[  "before_widget" => $before_widget,
+		"after_widget"  => $after_widget,
+		"before_title"  => $before_title,
+		"after_title"   => $after_title,
+	] = array_merge([
+		"before_widget" => "",
+		"after_widget"  => "",
+		"before_title"  => "",
+		"after_title"   => "",
+	], (array) $args);
 
 		/* User-selected settings. */
 		$showcategories = $instance['showcategories'];		
@@ -826,7 +871,16 @@ class con_tabbed_archives extends WP_Widget {
 		}	
 		function widget( $args, $instance ) {
 			
-			extract( $args );
+			[  "before_widget" => $before_widget,
+		"after_widget"  => $after_widget,
+		"before_title"  => $before_title,
+		"after_title"   => $after_title,
+	] = array_merge([
+		"before_widget" => "",
+		"after_widget"  => "",
+		"before_title"  => "",
+		"after_title"   => "",
+	], (array) $args);
 	
 			/* User-selected settings. */
 			$reviewtype = $instance['reviewtype'];
@@ -1062,7 +1116,16 @@ class con_tabbed_archives extends WP_Widget {
 		}	
 		function widget( $args, $instance ) {
 			
-			extract( $args );
+			[  "before_widget" => $before_widget,
+		"after_widget"  => $after_widget,
+		"before_title"  => $before_title,
+		"after_title"   => $after_title,
+	] = array_merge([
+		"before_widget" => "",
+		"after_widget"  => "",
+		"before_title"  => "",
+		"after_title"   => "",
+	], (array) $args);
 	
 			/* User-selected settings. */
 			$sort = $instance['sort'];
@@ -1442,7 +1505,16 @@ class con_tabbed_archives extends WP_Widget {
 		}	
 		function widget( $args, $instance ) {
 			
-			extract( $args );
+			[  "before_widget" => $before_widget,
+		"after_widget"  => $after_widget,
+		"before_title"  => $before_title,
+		"after_title"   => $after_title,
+	] = array_merge([
+		"before_widget" => "",
+		"after_widget"  => "",
+		"before_title"  => "",
+		"after_title"   => "",
+	], (array) $args);
 	
 			/* User-selected settings. */
 			$sort = $instance['sort'];
@@ -1660,7 +1732,16 @@ class con_tabbed_archives extends WP_Widget {
 		}	
 		function widget( $args, $instance ) {
 			
-			extract( $args );
+			[  "before_widget" => $before_widget,
+		"after_widget"  => $after_widget,
+		"before_title"  => $before_title,
+		"after_title"   => $after_title,
+	] = array_merge([
+		"before_widget" => "",
+		"after_widget"  => "",
+		"before_title"  => "",
+		"after_title"   => "",
+	], (array) $args);
 	
 			/* User-selected settings. */
 			$title = apply_filters('widget_title', $instance['title'] );
@@ -1831,7 +1912,16 @@ $con_reviews = get_option( 'con_reviews', $con_reviews );
 $con_ads = get_option( 'con_ads', $con_ads );
 $con_misc = get_option( 'con_misc', $con_misc );
 		
-		extract( $args );
+		[  "before_widget" => $before_widget,
+		"after_widget"  => $after_widget,
+		"before_title"  => $before_title,
+		"after_title"   => $after_title,
+	] = array_merge([
+		"before_widget" => "",
+		"after_widget"  => "",
+		"before_title"  => "",
+		"after_title"   => "",
+	], (array) $args);
 		
 		$text = $instance['text'];	
 		
@@ -1881,7 +1971,16 @@ $con_reviews = get_option( 'con_reviews', $con_reviews );
 $con_ads = get_option( 'con_ads', $con_ads );
 $con_misc = get_option( 'con_misc', $con_misc );
 		
-		extract( $args );
+		[  "before_widget" => $before_widget,
+		"after_widget"  => $after_widget,
+		"before_title"  => $before_title,
+		"after_title"   => $after_title,
+	] = array_merge([
+		"before_widget" => "",
+		"after_widget"  => "",
+		"before_title"  => "",
+		"after_title"   => "",
+	], (array) $args);
 		
 		$ad1 = $instance['ad1'];	
 		$ad2 = $instance['ad2'];
@@ -1943,7 +2042,16 @@ $con_reviews = get_option( 'con_reviews', $con_reviews );
 $con_ads = get_option( 'con_ads', $con_ads );
 $con_misc = get_option( 'con_misc', $con_misc );
 					
-		extract( $args );
+		[  "before_widget" => $before_widget,
+		"after_widget"  => $after_widget,
+		"before_title"  => $before_title,
+		"after_title"   => $after_title,
+	] = array_merge([
+		"before_widget" => "",
+		"after_widget"  => "",
+		"before_title"  => "",
+		"after_title"   => "",
+	], (array) $args);
 
 		/* User-selected settings. */
 		$title = apply_filters('widget_title', $instance['title'] );

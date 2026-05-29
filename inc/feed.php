@@ -136,7 +136,7 @@ wp_reset_query();
 if($con_feed_single && $feedsort=="more") {
 	$category = get_the_category();
 	$cat_tree = get_category_parents($category[0]->term_id, FALSE, ':', TRUE);
-	$top_cat = split(':',$cat_tree);	
+	$top_cat = explode(':',$cat_tree);	
 	$idObj = get_category_by_slug($top_cat[0]); 
   	$id = $idObj->term_id;
 	$name = $idObj->name;
@@ -187,7 +187,7 @@ $feed_loop = new WP_Query($feedargs);
 					if(get_post_type() == 'post') {
 						$category = get_the_category();
 						$cat_tree = get_category_parents($category[0]->term_id, FALSE, ':', TRUE);
-						$top_cat = split(':',$cat_tree);
+						$top_cat = explode(':',$cat_tree);
 						$parentObj = get_category_by_slug($top_cat[0]);
 						$parent = $parentObj->name;
 					} else {

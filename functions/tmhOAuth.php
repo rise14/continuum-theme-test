@@ -14,7 +14,21 @@
 class tmhOAuth {
   const VERSION = '0.7.5';
 
-  var $response = array();
+  // Explicit property declarations for PHP 8.2+ compatibility
+  public $response        = array();
+  public $params          = array();
+  public $headers         = array();
+  public $custom_headers  = array();
+  public $auto_fixed_time = false;
+  public $buffer          = null;
+  public $config          = array();
+  public $method          = '';
+  public $url             = '';
+  public $request_params  = array();
+  public $signing_params  = array();
+  public $auth_params     = array();
+  public $base_string     = '';
+  public $auth_header     = '';
 
   /**
    * Creates a new tmhOAuth object
