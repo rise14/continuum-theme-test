@@ -4,6 +4,13 @@ global $con_front, $con_layout, $con_feed, $con_reviews, $con_ads, $con_misc;
 $con_front = get_option( 'con_front', $con_front );
 $con_layout = get_option( 'con_layout', $con_layout );
 $con_feed = get_option( 'con_feed', $con_feed );
+$con_reviews = get_option( 'con_reviews', $con_reviews );
+
+$con_posttype_enable_movies   = !empty($con_reviews['posttype_enable_movies'])   ? $con_reviews['posttype_enable_movies']   : false;
+$con_posttype_enable_music    = !empty($con_reviews['posttype_enable_music'])    ? $con_reviews['posttype_enable_music']    : false;
+$con_posttype_enable_games    = !empty($con_reviews['posttype_enable_games'])    ? $con_reviews['posttype_enable_games']    : false;
+$con_posttype_enable_books    = !empty($con_reviews['posttype_enable_books'])    ? $con_reviews['posttype_enable_books']    : false;
+$con_posttype_enable_products = !empty($con_reviews['posttype_enable_products']) ? $con_reviews['posttype_enable_products'] : false;
 
 //##########################################
 //create custom post type of Movie Reviews

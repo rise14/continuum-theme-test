@@ -194,13 +194,13 @@ function con_load_widgets()
 
 //LATEST TWEETS
 class con_latest_tweets extends WP_Widget {
-	function con_latest_tweets() {
+	function __construct() {
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'Continuum Latest Tweets', 'description' => __( 'Displays your latest Tweets','continuum') );
 		/* Widget control settings. */
 		$control_ops = array( 'width' => 200, 'height' => 350, 'id_base' => 'con_latest_tweets' );
 		/* Create the widget. */
-		$this->WP_Widget( 'con_latest_tweets', 'Continuum Latest Tweets', $widget_ops, $control_ops );
+		parent::__construct( 'con_latest_tweets', 'Continuum Latest Tweets', $widget_ops, $control_ops );
 	}	
 	function widget( $args, $instance ) {
 		//get theme options
@@ -337,13 +337,13 @@ class con_latest_tweets extends WP_Widget {
 
 //FLICKR FEED
 class con_flickr extends WP_Widget {
-	function con_flickr() {
+	function __construct() {
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'Continuum Flickr Feed', 'description' => 'Displays your Flickr feed.' );
 		/* Widget control settings. */
 		$control_ops = array( 'width' => 200, 'height' => 350, 'id_base' => 'con_flickr' );
 		/* Create the widget. */
-		$this->WP_Widget( 'con_flickr', 'Continuum Flickr Feed', $widget_ops, $control_ops );
+		parent::__construct( 'con_flickr', 'Continuum Flickr Feed', $widget_ops, $control_ops );
 	}	
 	function widget( $args, $instance ) {
 		//get theme options
@@ -445,13 +445,13 @@ class con_flickr extends WP_Widget {
 
 //recent REACTIONS
 class con_recent_reactions extends WP_Widget {
-	function con_recent_reactions() {
+	function __construct() {
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'Continuum Recent Reactions', 'description' => 'Displays your recent comments in a vertically scrolling list.' );
 		/* Widget control settings. */
 		$control_ops = array( 'width' => 200, 'height' => 350, 'id_base' => 'con_recent_reactions' );
 		/* Create the widget. */
-		$this->WP_Widget( 'con_recent_reactions', 'Continuum Recent Reactions', $widget_ops, $control_ops );
+		parent::__construct( 'con_recent_reactions', 'Continuum Recent Reactions', $widget_ops, $control_ops );
 	}	
 	function widget( $args, $instance ) {		
 		extract( $args );
@@ -500,13 +500,13 @@ class con_recent_reactions extends WP_Widget {
 
 //TABBED POSTS
 class con_tabbed_posts extends WP_Widget {
-	function con_tabbed_posts() {
+	function __construct() {
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'Continuum Post Tabs', 'description' => 'Displays posts, comments, and tags in a jQuery tabbed format.' );
 		/* Widget control settings. */
 		$control_ops = array( 'width' => 200, 'height' => 350, 'id_base' => 'con_tabbed_posts' );
 		/* Create the widget. */
-		$this->WP_Widget( 'con_tabbed_posts', 'Continuum Post Tabs', $widget_ops, $control_ops );
+		parent::__construct( 'con_tabbed_posts', 'Continuum Post Tabs', $widget_ops, $control_ops );
 	}	
 	function widget( $args, $instance ) {		
 		extract( $args );
@@ -681,13 +681,13 @@ class con_tabbed_posts extends WP_Widget {
 }
 //TABBED ARCHIVES
 class con_tabbed_archives extends WP_Widget {
-	function con_tabbed_archives() {
+	function __construct() {
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'Continuum Page & Archive Tabs', 'description' => 'Displays pages, categories, and archives in a jQuery tabbed format.' );
 		/* Widget control settings. */
 		$control_ops = array( 'width' => 320, 'height' => 350, 'id_base' => 'con_tabbed_archives' );
 		/* Create the widget. */
-		$this->WP_Widget( 'con_tabbed_archives', 'Continuum Page & Archive Tabs', $widget_ops, $control_ops );
+		parent::__construct( 'con_tabbed_archives', 'Continuum Page & Archive Tabs', $widget_ops, $control_ops );
 	}	
 	function widget( $args, $instance ) {
 		extract( $args );
@@ -815,15 +815,14 @@ class con_tabbed_archives extends WP_Widget {
 	}
 }
 //TABBED REVIEWS
-if($typecount>0) {
 	class con_tabbed_reviews extends WP_Widget {
-		function con_tabbed_reviews() {
+		function __construct() {
 			/* Widget settings. */
 			$widget_ops = array( 'classname' => 'Continuum Review Category Tabs', 'description' => 'Displays review categories in a jQuery tabbed format.' );
 			/* Widget control settings. */
 			$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'con_tabbed_reviews' );
 			/* Create the widget. */
-			$this->WP_Widget( 'con_tabbed_reviews', 'Continuum Review Category Tabs', $widget_ops, $control_ops );
+			parent::__construct( 'con_tabbed_reviews', 'Continuum Review Category Tabs', $widget_ops, $control_ops );
 		}	
 		function widget( $args, $instance ) {
 			
@@ -1051,17 +1050,15 @@ if($typecount>0) {
 			<?php
 		}
 	}
-}
 //TABBED LATEST REVIEWS
-if($typecount>0) {
 	class con_tabbed_latest_reviews extends WP_Widget {
-		function con_tabbed_latest_reviews() {
+		function __construct() {
 			/* Widget settings. */
 			$widget_ops = array( 'classname' => 'Continuum Latest Review Tabs', 'description' => 'Displays reviews by most recent or highest rated in a jQuery tabbed format.' );
 			/* Widget control settings. */
 			$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'con_tabbed_latest_reviews' );
 			/* Create the widget. */
-			$this->WP_Widget( 'con_tabbed_latest_reviews', 'Continuum Latest Review Tabs', $widget_ops, $control_ops );
+			parent::__construct( 'con_tabbed_latest_reviews', 'Continuum Latest Review Tabs', $widget_ops, $control_ops );
 		}	
 		function widget( $args, $instance ) {
 			
@@ -1432,18 +1429,16 @@ if($typecount>0) {
 			<?php
 		}
 	}
-}
 //TABBED LATEST CASION REVIEWS BY TYPE
 //THIS IS FUNCTIONALITY THAT WAS BUILT FOR A CLIENT. I LEFT IT IN BECAUSE I MIGHT BASE A FUTURE WIDGET ON IT. IT IS NOT CURRENTLY USED.
-if($typecount>0) {
 	class con_tabbed_latest_casino_reviews extends WP_Widget {
-		function con_tabbed_latest_casino_reviews() {
+		function __construct() {
 			/* Widget settings. */
 			$widget_ops = array( 'classname' => 'Continuum Casino Review Tabs', 'description' => 'Displays reviews by most recent or highest rated in a jQuery tabbed format.' );
 			/* Widget control settings. */
 			$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'con_tabbed_latest_casino_reviews' );
 			/* Create the widget. */
-			$this->WP_Widget( 'con_tabbed_latest_casino_reviews', 'Continuum Casino Review Tabs', $widget_ops, $control_ops );
+			parent::__construct( 'con_tabbed_latest_casino_reviews', 'Continuum Casino Review Tabs', $widget_ops, $control_ops );
 		}	
 		function widget( $args, $instance ) {
 			
@@ -1653,17 +1648,15 @@ if($typecount>0) {
 			<?php
 		}
 	}
-}
 //NON-TABBED LATEST REVIEWS
-if($typecount>0) {
 	class con_latest_reviews extends WP_Widget {
-		function con_latest_reviews() {
+		function __construct() {
 			/* Widget settings. */
 			$widget_ops = array( 'classname' => 'Continuum Latest Reviews', 'description' => 'Displays a single review type by most recent or highest rated. Add multiple widgets for each review type.' );
 			/* Widget control settings. */
 			$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'con_latest_reviews' );
 			/* Create the widget. */
-			$this->WP_Widget( 'con_latest_reviews', 'Continuum Latest Reviews', $widget_ops, $control_ops );
+			parent::__construct( 'con_latest_reviews', 'Continuum Latest Reviews', $widget_ops, $control_ops );
 		}	
 		function widget( $args, $instance ) {
 			
@@ -1818,16 +1811,15 @@ if($typecount>0) {
 			<?php
 		}
 	}
-}
 //UNWRAPPED TEXT
 class con_unwrapped extends WP_Widget {
-	function con_unwrapped() {
+	function __construct() {
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'Continuum Unwrapped Text', 'description' => 'Displays arbritrary text of HTML just like the standard Text widget, but this one does not include the header bar and wrapper style - just a blank canvas for content.' );
 		/* Widget control settings. */
 		$control_ops = array( 'width' => 400, 'height' => 350, 'id_base' => 'con_unwrapped' );
 		/* Create the widget. */
-		$this->WP_Widget( 'con_unwrapped', 'Continuum Unwrapped Text', $widget_ops, $control_ops );
+		parent::__construct( 'con_unwrapped', 'Continuum Unwrapped Text', $widget_ops, $control_ops );
 	}	
 	function widget( $args, $instance ) {
 		//get theme options
@@ -1871,13 +1863,13 @@ $con_misc = get_option( 'con_misc', $con_misc );
 
 //AD 125
 class con_ad_125 extends WP_Widget {
-	function con_ad_125() {
+	function __construct() {
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'Continuum Floating Ad', 'description' => 'Insert your adsense or HTML code for two 125px-wide ads that will float next to each other.' );
 		/* Widget control settings. */
 		$control_ops = array( 'width' => 400, 'height' => 350, 'id_base' => 'con_ad_125' );
 		/* Create the widget. */
-		$this->WP_Widget( 'con_ad_125', 'Continuum Floating Ad', $widget_ops, $control_ops );
+		parent::__construct( 'con_ad_125', 'Continuum Floating Ad', $widget_ops, $control_ops );
 	}	
 	function widget( $args, $instance ) {
 		//get theme options
@@ -1933,13 +1925,13 @@ $con_misc = get_option( 'con_misc', $con_misc );
 
 //EMAIL SUBSCRIBE
 class con_email_subscribe extends WP_Widget {
-	function con_email_subscribe() {
+	function __construct() {
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'Continuum Email Subscribe', 'description' => 'Displays a form for users to subscribe to your Feedburner feed via email.' );
 		/* Widget control settings. */
 		$control_ops = array( 'width' => 200, 'height' => 350, 'id_base' => 'con_email_subscribe' );
 		/* Create the widget. */
-		$this->WP_Widget( 'con_email_subscribe', 'Continuum Email Subscribe', $widget_ops, $control_ops );
+		parent::__construct( 'con_email_subscribe', 'Continuum Email Subscribe', $widget_ops, $control_ops );
 	}	
 	function widget( $args, $instance ) {
 		//get theme options

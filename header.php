@@ -2,9 +2,22 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php //get theme options
 global $con_front, $con_layout, $con_feed, $con_reviews, $con_ads, $con_misc;
-$con_front = get_option( 'con_front', $con_front );
-$con_layout = get_option( 'con_layout', $con_layout );
-$con_feed = get_option( 'con_feed', $con_feed );
+$con_front   = get_option( 'con_front', $con_front );
+$con_layout  = get_option( 'con_layout', $con_layout );
+$con_feed    = get_option( 'con_feed', $con_feed );
+$con_misc    = get_option( 'con_misc', $con_misc );
+$con_ads     = get_option( 'con_ads', $con_ads );
+
+// Unpack con_misc options used in header
+$con_background_fixed = !empty($con_misc['background_fixed']) ? $con_misc['background_fixed'] : false;
+$con_breaking_hidden  = !empty($con_misc['breaking_hidden'])  ? $con_misc['breaking_hidden']  : false;
+$con_fancy_tooltips   = !empty($con_misc['fancy_tooltips'])   ? $con_misc['fancy_tooltips']   : false;
+$con_colorbox         = !empty($con_misc['colorbox'])         ? $con_misc['colorbox']         : false;
+$con_search_show      = isset($con_misc['search_show'])       ? $con_misc['search_show']      : true;
+$con_smallmenu_show   = isset($con_misc['smallmenu_show'])    ? $con_misc['smallmenu_show']   : true;
+$con_background       = !empty($con_misc['background'])       ? $con_misc['background']       : '';
+$con_color            = !empty($con_misc['color'])            ? $con_misc['color']            : '';
+$con_logo             = !empty($con_misc['logo'])             ? $con_misc['logo']             : '';
 ?>
 
 <?php if ( ! isset( $content_width ) ) $content_width = 960; ?>
