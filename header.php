@@ -27,6 +27,7 @@ $con_logo             = !empty($con_misc['logo'])             ? $con_misc['logo'
 	
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="googlebot-news" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
 	<?php if (is_search()) { ?>
@@ -105,7 +106,7 @@ $con_logo             = !empty($con_misc['logo'])             ? $con_misc['logo'
     
 	<?php wp_head(); ?>
     
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom.js"></script> <!-- continuum js -->
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom.js" defer></script> <!-- mobile nav toggle -->
     
     <?php if($con_fancy_tooltips) { ?>
     

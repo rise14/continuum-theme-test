@@ -1,4 +1,184 @@
 /* Add in your custom CSS here and it will overwrite all default style in Continuum */
+
+/* ============================================================
+   Mobile-friendly overrides
+   Breakpoints: tablet ≤ 960px, mobile ≤ 640px
+   ============================================================ */
+
+/* Make all images scale */
+img { max-width: 100%; height: auto; }
+
+/* Tablet: constrain fixed-width containers */
+@media screen and (max-width: 960px) {
+  body { display: block; }
+
+  #page-wrap,
+  #page-menu,
+  #main-menu-wrapper,
+  #main-menu,
+  #main-menu .container,
+  #page-menu .container,
+  #logo-bar,
+  #small-menu-wrapper,
+  #feed-wrapper,
+  #feed,
+  #footer,
+  #footer .container {
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #feed-wrapper {
+    display: block;
+  }
+
+  #feed-leftend,
+  #feed-rightend {
+    display: none;
+  }
+
+  .feed-panel {
+    width: 100% !important;
+    float: none !important;
+    height: auto !important;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+
+  .feed-panel .inner {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .feed-panel .category {
+    width: auto !important;
+    margin-left: 0;
+  }
+
+  #feed-panel-wrapper .left-panel,
+  #feed-panel-wrapper .right-panel {
+    width: 100% !important;
+    float: none !important;
+    border: none;
+    box-sizing: border-box;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    float: none !important;
+    border-right: none;
+    border-top: 1px solid #b5b5b5;
+    box-sizing: border-box;
+  }
+
+  #content-wrapper,
+  #content,
+  .content-area {
+    width: 100% !important;
+    float: none !important;
+    box-sizing: border-box;
+  }
+}
+
+/* Mobile: hamburger nav, stack everything */
+@media screen and (max-width: 640px) {
+
+  /* Hide desktop nav items, show toggle button */
+  #main-menu ul,
+  #small-menu-wrapper,
+  #page-menu .container {
+    display: none;
+  }
+
+  #main-menu {
+    position: relative;
+  }
+
+  /* Hamburger toggle button */
+  #mobile-nav-toggle {
+    display: block;
+    background: #40444A;
+    color: #fff;
+    border: none;
+    font-size: 1.4em;
+    padding: 10px 16px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+
+  #main-menu.nav-open ul {
+    display: block;
+    width: 100%;
+  }
+
+  #main-menu ul li {
+    float: none !important;
+    width: 100% !important;
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  #main-menu ul li a {
+    display: block;
+    padding: 12px 16px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Dropdown submenus stack inline on mobile */
+  #main-menu ul li ul {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    box-shadow: none;
+  }
+
+  #main-menu ul li ul li a {
+    padding-left: 32px !important;
+  }
+
+  /* Page menu (top bar) */
+  #page-menu-wrapper {
+    display: none;
+  }
+
+  /* Logo bar */
+  #logo-bar .floatleft,
+  #logo-bar .floatright {
+    float: none !important;
+    text-align: center;
+    width: 100% !important;
+  }
+
+  #logo-bar img {
+    max-width: 280px;
+  }
+
+  /* Search */
+  #search {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  #searchform input[type="text"] {
+    width: 80% !important;
+  }
+
+  /* Footer columns */
+  #footer .floatleft,
+  #footer .floatright,
+  #footer-col-1,
+  #footer-col-2,
+  #footer-col-3 {
+    float: none !important;
+    width: 100% !important;
+    display: block;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+}
 #main-menu .container {
         width:957px;
         float:left;
