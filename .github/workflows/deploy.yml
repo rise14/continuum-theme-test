@@ -18,8 +18,9 @@ jobs:
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ftp.yourdomain.com
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
           local-dir: ./
           server-dir: /public_html/wp-content/themes/continuum-theme-test/
