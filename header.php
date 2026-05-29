@@ -26,14 +26,35 @@ $con_logo             = !empty($con_misc['logo'])             ? $con_misc['logo'
 <head profile="http://gmpg.org/xfn/11">
 	
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<meta name="description" content="Roots Music and Meaningful Matters."/>
-	<meta name="googlebot-news" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-	<meta property="og:title" content="Deep Roots Magazine - Roots Music and Meaningful Matters" />
 	<meta charset="UTF-8">
-	
+	<meta name="googlebot-news" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
 	<?php if (is_search()) { ?>
-	   <meta name="robots" /> 
+	<meta name="robots" content="noindex, follow" />
 	<?php } ?>
+
+	<?php
+	// OG / Twitter meta — only output if no SEO plugin is handling it
+	if ( ! defined('WPSEO_VERSION') && ! defined('RANK_MATH_VERSION') ) :
+		$og_title       = is_singular() ? get_the_title() : get_bloginfo('name');
+		$og_description = is_singular() && has_excerpt() ? get_the_excerpt() : get_bloginfo('description');
+		$og_image       = is_singular() && has_post_thumbnail() ? get_the_post_thumbnail_url( null, 'large' ) : '';
+		$og_url         = is_singular() ? get_permalink() : home_url('/');
+	?>
+	<meta property="og:type" content="<?php echo is_singular() ? 'article' : 'website'; ?>" />
+	<meta property="og:title" content="<?php echo esc_attr( $og_title ); ?>" />
+	<meta property="og:description" content="<?php echo esc_attr( $og_description ); ?>" />
+	<meta property="og:url" content="<?php echo esc_url( $og_url ); ?>" />
+	<?php if ( $og_image ) : ?>
+	<meta property="og:image" content="<?php echo esc_url( $og_image ); ?>" />
+	<?php endif; ?>
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="<?php echo esc_attr( $og_title ); ?>" />
+	<meta name="twitter:description" content="<?php echo esc_attr( $og_description ); ?>" />
+	<?php if ( $og_image ) : ?>
+	<meta name="twitter:image" content="<?php echo esc_url( $og_image ); ?>" />
+	<?php endif; ?>
+	<?php endif; ?>
 	
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     
