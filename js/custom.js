@@ -4,6 +4,8 @@
     if (!menu) return;
 
     // Insert hamburger button before the menu
+    if (window.innerWidth > 640) return;
+
     var btn = document.createElement('button');
     btn.id = 'mobile-nav-toggle';
     btn.setAttribute('aria-label', 'Toggle navigation');
