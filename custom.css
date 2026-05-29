@@ -1,5 +1,11 @@
 /* Add in your custom CSS here and it will overwrite all default style in Continuum */
 
+@media screen {
+  .feed-panel .meta {
+    border-bottom: 1px solid #FFF;
+  }
+}
+
 /* ============================================================
    Mobile-friendly overrides
    Breakpoints: tablet ≤ 960px, mobile ≤ 640px
