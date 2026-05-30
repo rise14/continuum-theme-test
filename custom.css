@@ -15,7 +15,7 @@
 img { max-width: 100%; height: auto; }
 
 /* Hide mobile nav toggle on desktop */
-#mobile-nav-toggle { display: none; }
+#mobile-nav-toggle { display: none !important; }
 
 /* Tablet: constrain fixed-width containers */
 @media screen and (max-width: 960px) {
