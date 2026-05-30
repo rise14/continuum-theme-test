@@ -6,6 +6,15 @@
   }
 }
 
+/* Full-width top menu bar */
+#page-menu-wrapper,
+#page-menu {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
 /* ============================================================
    Mobile-friendly overrides
    Breakpoints: tablet ≤ 960px, mobile ≤ 640px
