@@ -6,7 +6,7 @@ if(function_exists('add_theme_support')) {
 }
 
 // This theme allows users to set a custom background
-add_custom_background();
+add_theme_support( 'custom-background' );
 
 // Returns page ID from page slug
 function get_ID_by_slug($page_slug) {

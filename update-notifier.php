@@ -137,5 +137,3 @@ function get_latest_theme_version($interval) {
 
 	return $xml;
 }
-
-?>
