@@ -392,5 +392,3 @@ if($con_posttype_enable_products) {
 	}
 	add_action( 'init', 'product_brand' );
 }
-
-?>

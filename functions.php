@@ -73,5 +73,3 @@ add_filter('intermediate_image_sizes_advanced', function ($sizes) {
     // Add other sizes to unset if needed
     return $sizes;
 });
-
-?>

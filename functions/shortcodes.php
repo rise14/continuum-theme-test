@@ -280,5 +280,3 @@ $GLOBALS['tabs'][$x] = array( 'title' => sprintf( $title, $GLOBALS['tab_count'] 
 
 $GLOBALS['tab_count']++;
 }
-
-?>

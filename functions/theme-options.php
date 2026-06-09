@@ -2791,4 +2791,3 @@ function con_validate_misc( $input ) {
 }
 
 endif;  // EndIf is_admin()
-?>

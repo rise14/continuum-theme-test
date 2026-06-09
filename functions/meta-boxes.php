@@ -206,4 +206,3 @@ function con_custom_fields_review() {
 	echo '<td class="notes"></td></tr>';
 	echo '</table>';
 }
-?>

@@ -736,4 +736,3 @@ class tmhOAuth {
     return $code;
   }
 }
-?>

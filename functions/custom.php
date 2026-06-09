@@ -613,5 +613,3 @@ function ucc_getarchives_where_filter( $where , $r ) {
    $post_types = get_post_types( $args , $output , $operator ); $post_types = array_merge( $post_types , array( 'post' ) ); $post_types = "'" . implode( "' , '" , $post_types ) . "'";
    return str_replace( "post_type = 'post'" , "post_type IN ( $post_types )" , $where );
 }
-
-?>

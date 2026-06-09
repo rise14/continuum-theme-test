@@ -48,5 +48,3 @@ do_action( 'con_get_comments' );
 if ( file_exists( TEMPLATEPATH . '/inc/con-comments.php') )
 	load_template( TEMPLATEPATH . '/inc/con-comments.php');
 }
-
-?>
