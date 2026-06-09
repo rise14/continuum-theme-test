@@ -1912,21 +1912,21 @@ $con_reviews = get_option( 'con_reviews', $con_reviews );
 $con_ads = get_option( 'con_ads', $con_ads );
 $con_misc = get_option( 'con_misc', $con_misc );
 		
-		[  "before_widget" => $before_widget,
-		"after_widget"  => $after_widget,
-		"before_title"  => $before_title,
-		"after_title"   => $after_title,
-	] = array_merge([
-		"before_widget" => "",
-		"after_widget"  => "",
-		"before_title"  => "",
-		"after_title"   => "",
-	], (array) $args);
-		
-		$text = $instance['text'];	
-		
+		$args = array_merge([
+			"before_widget" => "",
+			"after_widget"  => "",
+			"before_title"  => "",
+			"after_title"   => "",
+		], (array) $args);
+		$before_widget = $args['before_widget'];
+		$after_widget  = $args['after_widget'];
+		$before_title  = $args['before_title'];
+		$after_title   = $args['after_title'];
+
+		$text = $instance['text'];
+
 		/* show the widget content without any headers or wrappers */
-		echo '<div class="unwrapped">'.do_shortcode($text).'</div>';	
+		echo '<div class="unwrapped">'.do_shortcode($text).'</div>';
 	}
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
